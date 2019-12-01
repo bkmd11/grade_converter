@@ -2,4 +2,4 @@ build/
 dist/
 *.spec
 .idea/
-__pycahce__
+__pycahce__/
