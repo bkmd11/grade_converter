@@ -2,4 +2,5 @@ build/
 dist/
 *.spec
 .idea/
-__pycahce__/
+__pycache__/
+*.ico

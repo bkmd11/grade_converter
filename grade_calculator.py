@@ -86,12 +86,15 @@ def main():
         depth_of_knowledge_grade = input('Enter the DOK grade or "q" to quit: ')
         if depth_of_knowledge_grade == 'q':
             break
-        percentage = grade_converter(float(depth_of_knowledge_grade))
-        if isinstance(percentage, float):
-            pyperclip.copy(percentage)
-            print(f'{percentage} - copied to cipboard')
-        else:
-            print(percentage)
+        try:
+            percentage = grade_converter(float(depth_of_knowledge_grade))
+            if isinstance(percentage, float):
+                pyperclip.copy(percentage)
+                print(f'{percentage} - copied to cipboard')
+            else:
+                print(percentage)
+        except ValueError:
+            print('Must be a number!')
 
 
 def test_script():
