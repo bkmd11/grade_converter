@@ -90,7 +90,7 @@ def main():
             percentage = grade_converter(float(depth_of_knowledge_grade))
             if isinstance(percentage, float):
                 pyperclip.copy(percentage)
-                print(f'{percentage} - copied to cipboard')
+                print(f'{percentage} - copied to clipboard')
             else:
                 print(percentage)
         except ValueError:
