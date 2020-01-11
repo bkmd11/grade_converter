@@ -13,19 +13,19 @@ N = 0-1.4 = 0-54        len(141)
 """
 
 """Setting my constant lists to reflect the score ranges referenced above"""
-PD_RANGE_LIST = [i for i in numpy.arange(90, 100, .198).round(decimals=1)]
+PD_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(90, 100, .198).round(decimals=1)]
 PD_GRADE_RANGE = [i for i in numpy.arange(3.5, 4.01, .01).round(decimals=2)]
 
-P_RANGE_LIST = [i for i in numpy.arange(75, 89, .14).round(decimals=1)]
+P_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(75, 89, .14).round(decimals=1)]
 P_GRADE_RANGE = [i for i in numpy.arange(2.5, 3.49, .01).round(decimals=2)]
 
-BP_RANGE_LIST = [i for i in numpy.arange(65, 74, .18).round(decimals=1)]
+BP_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(65, 74, .18).round(decimals=1)]
 BP_GRADE_RANGE = [i for i in numpy.arange(2, 2.49, .01).round(decimals=2)]
 
-I_RANGE_LIST = [i for i in numpy.arange(55, 64, .185).round(decimals=1)]
+I_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(55, 64, .185).round(decimals=1)]
 I_GRADE_RANGE = [i for i in numpy.arange(1.5, 1.99, .01).round(decimals=2)]
 
-N_RANGE_LIST = [i for i in numpy.arange(0, 54, .363).round(decimals=1)]
+N_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(0, 54, .363).round(decimals=1)]
 N_GRADE_RANGE = [i for i in numpy.arange(0, 1.49, .01).round(decimals=2)]
 
 
@@ -36,31 +36,31 @@ the list for the depth of knowledge letter scale, which is referenced above"""
 def pd_range(depth_of_knowledge_grade):
     index_number = PD_GRADE_RANGE.index(depth_of_knowledge_grade)
 
-    return PD_RANGE_LIST[index_number]
+    return PD_TRADITIONAL_GRADE_RANGE_LIST[index_number]
 
 
 def p_range(depth_of_knowledge_grade):
     index_number = P_GRADE_RANGE.index(depth_of_knowledge_grade)
 
-    return P_RANGE_LIST[index_number]
+    return P_TRADITIONAL_GRADE_RANGE_LIST[index_number]
 
 
 def bp_range(depth_of_knowledge_grade):
     index_number = BP_GRADE_RANGE.index(depth_of_knowledge_grade)
 
-    return BP_RANGE_LIST[index_number]
+    return BP_TRADITIONAL_GRADE_RANGE_LIST[index_number]
 
 
 def i_range(depth_of_knowledge_grade):
     index_number = I_GRADE_RANGE.index(depth_of_knowledge_grade)
 
-    return I_RANGE_LIST[index_number]
+    return I_TRADITIONAL_GRADE_RANGE_LIST[index_number]
 
 
 def n_range(depth_of_knowledge_grade):
     index_number = N_GRADE_RANGE.index(depth_of_knowledge_grade)
 
-    return N_RANGE_LIST[index_number]
+    return N_TRADITIONAL_GRADE_RANGE_LIST[index_number]
 
 
 def grade_converter(depth_of_knowledge_grade):
