@@ -29,52 +29,31 @@ N_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(0, 54, .363).round(dec
 N_GRADE_RANGE = [i for i in numpy.arange(0, 1.49, .01).round(decimals=2)]
 
 
-""" These functions all work by taking the depth of knowledge grade and finding its index on 
-the list for the depth of knowledge letter scale, which is referenced above"""
+def grade_range_finder(input_grade, traditional_grade_list, depth_of_knowledge_grade_list):
+    """Takes a depth of knowledge grade and compares its place in a list index to a corresponding list
+    to convert into a traditional grade"""
+    index_num = depth_of_knowledge_grade_list.index(input_grade)
 
-
-def pd_range(depth_of_knowledge_grade):
-    index_number = PD_GRADE_RANGE.index(depth_of_knowledge_grade)
-
-    return PD_TRADITIONAL_GRADE_RANGE_LIST[index_number]
-
-
-def p_range(depth_of_knowledge_grade):
-    index_number = P_GRADE_RANGE.index(depth_of_knowledge_grade)
-
-    return P_TRADITIONAL_GRADE_RANGE_LIST[index_number]
-
-
-def bp_range(depth_of_knowledge_grade):
-    index_number = BP_GRADE_RANGE.index(depth_of_knowledge_grade)
-
-    return BP_TRADITIONAL_GRADE_RANGE_LIST[index_number]
-
-
-def i_range(depth_of_knowledge_grade):
-    index_number = I_GRADE_RANGE.index(depth_of_knowledge_grade)
-
-    return I_TRADITIONAL_GRADE_RANGE_LIST[index_number]
-
-
-def n_range(depth_of_knowledge_grade):
-    index_number = N_GRADE_RANGE.index(depth_of_knowledge_grade)
-
-    return N_TRADITIONAL_GRADE_RANGE_LIST[index_number]
+    return traditional_grade_list[index_num]
 
 
 def grade_converter(depth_of_knowledge_grade):
     """Takes the grade level descriptor and the DKG and finds the percentage range it will be in"""
     if 3.5 <= depth_of_knowledge_grade <= 4:
-        grade_percentage = pd_range(depth_of_knowledge_grade)
+        grade_percentage = grade_range_finder(depth_of_knowledge_grade, PD_TRADITIONAL_GRADE_RANGE_LIST, PD_GRADE_RANGE)
+
     elif 2.5 <= depth_of_knowledge_grade <= 3.49:
-        grade_percentage = p_range(depth_of_knowledge_grade)
+        grade_percentage = grade_range_finder(depth_of_knowledge_grade, P_TRADITIONAL_GRADE_RANGE_LIST, P_GRADE_RANGE)
+
     elif 2 <= depth_of_knowledge_grade <= 2.49:
-        grade_percentage = bp_range(depth_of_knowledge_grade)
+        grade_percentage = grade_range_finder(depth_of_knowledge_grade, BP_TRADITIONAL_GRADE_RANGE_LIST, BP_GRADE_RANGE)
+
     elif 1.5 <= depth_of_knowledge_grade <= 1.99:
-        grade_percentage = i_range(depth_of_knowledge_grade)
+        grade_percentage = grade_range_finder(depth_of_knowledge_grade, I_TRADITIONAL_GRADE_RANGE_LIST, I_GRADE_RANGE)
+
     elif 0 <= depth_of_knowledge_grade <= 1.49:
-        grade_percentage = n_range(depth_of_knowledge_grade)
+        grade_percentage = grade_range_finder(depth_of_knowledge_grade, N_TRADITIONAL_GRADE_RANGE_LIST, N_GRADE_RANGE)
+
     else:
         grade_percentage = 'DOK grade out of range'
 
