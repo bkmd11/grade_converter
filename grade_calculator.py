@@ -3,6 +3,7 @@ based on a lopsided scale, so that a more traditional grade can be entered into 
 import numpy
 import pyperclip
 
+# TODO: I can swap this around a little to make it convert either way
 """
 PD = 3.5-4 = 90-100     len(51)
 P = 2.5-3.4 = 75-89     len(91)
