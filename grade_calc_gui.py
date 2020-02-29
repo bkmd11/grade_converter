@@ -1,3 +1,7 @@
+""" A GUI for the grade converting calculator that I made for my wife"""
+# TODO: play around with sizing and colors
+#  Make key events effect calc correctly, currently they break it
+
 import PySimpleGUI as psg
 import grade_calculator
 
