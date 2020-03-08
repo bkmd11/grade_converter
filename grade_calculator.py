@@ -3,27 +3,30 @@ based on a lopsided scale, so that a more traditional grade can be entered into 
 import numpy
 import pyperclip
 
+
 # TODO: I can swap this around a little to make it convert either way
+#  make tests pass
+
 """
-PD = 3.5-4 = 90-100     len(51)
-P = 2.5-3.4 = 75-89     len(91)
-BP = 2-2.4 = 65-74      len(41)
-I = 1.5-1.9 = 55-64     len(41)
+PD = 3.5-4 = 92-100     len(51)
+P = 2.5-3.4 = 76-91     len(91)
+BP = 2-2.4 = 66-75      len(41)
+I = 1.5-1.9 = 55-65     len(41)
 N = 0-1.4 = 0-54        len(141)
 
 """
 
 """Setting my constant lists to reflect the score ranges referenced above"""
-PD_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(90, 100, .198).round(decimals=1)]
+PD_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(92, 100, .159).round(decimals=1)]
 PD_GRADE_RANGE = [i for i in numpy.arange(3.5, 4.01, .01).round(decimals=2)]
 
-P_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(75, 89, .14).round(decimals=1)]
+P_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(76, 91, .14).round(decimals=1)]
 P_GRADE_RANGE = [i for i in numpy.arange(2.5, 3.49, .01).round(decimals=2)]
 
-BP_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(65, 74, .18).round(decimals=1)]
-BP_GRADE_RANGE = [i for i in numpy.arange(2, 2.49, .01).round(decimals=2)]
+BP_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(66, 75, .2295).round(decimals=1)]
+BP_GRADE_RANGE = [i for i in numpy.arange(2, 2.4, .01).round(decimals=2)]
 
-I_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(55, 64, .185).round(decimals=1)]
+I_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(55, 65, .185).round(decimals=1)]
 I_GRADE_RANGE = [i for i in numpy.arange(1.5, 1.99, .01).round(decimals=2)]
 
 N_TRADITIONAL_GRADE_RANGE_LIST = [i for i in numpy.arange(0, 54, .363).round(decimals=1)]
@@ -84,4 +87,6 @@ def test_script():
 
 
 if __name__ == '__main__':
-    main()
+    print(f'DOK {len(BP_GRADE_RANGE)} - TRAD {len(BP_TRADITIONAL_GRADE_RANGE_LIST)}')
+    print(BP_GRADE_RANGE)
+    print(BP_TRADITIONAL_GRADE_RANGE_LIST)
