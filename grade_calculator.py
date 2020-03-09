@@ -5,6 +5,7 @@ import pyperclip
 
 
 # TODO: I can swap this around a little to make it convert either way
+#  revisit logic yet again with the wench meat
 
 """
 PD = 3.5-4 = 92-100    
@@ -42,7 +43,6 @@ def grade_range_finder(input_grade, traditional_grade_list, depth_of_knowledge_g
 
 def grade_converter(depth_of_knowledge_grade):
     """Takes the grade level descriptor and the DKG and finds the percentage range it will be in"""
-    depth_of_knowledge_grade = round(depth_of_knowledge_grade, 1)
     if 3.5 <= depth_of_knowledge_grade <= 4:
         grade_percentage = grade_range_finder(depth_of_knowledge_grade, PD_TRADITIONAL_GRADE_RANGE_LIST, PD_GRADE_RANGE)
 
@@ -75,7 +75,7 @@ def main():
                 pyperclip.copy(percentage)
                 print(f'{percentage} - copied to clipboard')
             else:
-                print(percentage)
+                print(percentage)   # this is for DOK grade out of range
         except ValueError:
             print('Must be a number!')
 
