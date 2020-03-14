@@ -5,7 +5,7 @@ import pyperclip
 
 
 # TODO: I can swap this around a little to make it convert either way
-#  revisit logic yet again with the wench meat
+#  revisit logic again with the wife
 
 """
 PD = 3.5-4 = 92-100    

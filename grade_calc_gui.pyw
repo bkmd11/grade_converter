@@ -75,11 +75,10 @@ def main():
                 main_window['OUTPUT'].update(grade_percentage)
                 dok_grade = ''
                 pyperclip.copy(grade_percentage)
-            except IndexError:
-                main_window['OUTPUT'].update('You have found a bug')
-                dok_grade = ''
             except ValueError:
+                main_window['OUTPUT'].update('You have found a gap')
                 dok_grade = ''
+
         elif event in ('<-', 'BackSpace:8'):
             dok_grade = dok_grade[:-1]
         elif event in ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.'):
