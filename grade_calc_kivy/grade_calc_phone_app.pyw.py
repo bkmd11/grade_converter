@@ -1,8 +1,11 @@
 from kivy.app import App
-from kivy.uix.widget import Widget
+from kivy.uix.button import Button
 
 
-class GradeCalc(Widget):
+class GradeCalc(Button):
+
+    def button(self):
+        pass
 
 
 class GradeCalcApp(App):
@@ -11,5 +14,6 @@ class GradeCalcApp(App):
 
         return app
 
+
 if __name__ == '__main__':
-    GradeCalc().run()
+    GradeCalcApp().run()
