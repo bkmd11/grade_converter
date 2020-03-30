@@ -1,7 +1,67 @@
 #kivy 1.11.1
 <GradeCalc>
     Label:
-        id: "calc"
-        text: "Calculate"
-       # on_press: print("oh yeah")
-       # on_state: print("calc")
+        id: "input"
+        text: "spam"
+        #size: self.texture_size
+        font_size: 80
+        top: root.top-50
+        center_x: root.width- 150
+    Label:
+        id: "output"
+        text: "eggs"
+        font_size: 80
+        top: root.top
+        center_x: 150
+ #   Button:
+  #      id: "calculate"
+   #     text: "Calculate"
+    #    size: root.width, 40
+    GridLayout:
+        id: "numbers"
+        cols: 3
+        rows: 5
+        size: root.width, root.height-200
+        center_x: root.width/2
+        center_y: root.height/2.5
+
+        Button:
+            font_size: 69
+            text: "1"
+        Button:
+            font_size: 69
+            text: "2"
+        Button:
+            font_size: 69
+            text: "3"
+        Button:
+            font_size: 69
+            text: "4"
+        Button:
+            font_size: 69
+            text: "5"
+        Button:
+            font_size: 69
+            text: "6"
+        Button:
+            font_size: 69
+            text: "7"
+        Button:
+            font_size: 69
+            text: "8"
+        Button:
+            font_size: 69
+            text: "9"
+        Button:
+            font_size: 69
+            text: "."
+        Button:
+            font_size: 69
+            text: "0"
+        Button:
+            font_size: 69
+            text: "<="
+        Button:
+            font_size: 69
+            text: "Calculate"
+            width: root.width

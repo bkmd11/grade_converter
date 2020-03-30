@@ -1,11 +1,10 @@
 from kivy.app import App
 from kivy.uix.button import Button
+from kivy.uix.gridlayout import GridLayout
 
 
-class GradeCalc(Button):
-
-    def button(self):
-        pass
+class GradeCalc(GridLayout):
+    pass
 
 
 class GradeCalcApp(App):
