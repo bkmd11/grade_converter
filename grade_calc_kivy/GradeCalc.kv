@@ -13,15 +13,16 @@
         font_size: 80
         top: root.top
         center_x: 150
- #   Button:
-  #      id: "calculate"
-   #     text: "Calculate"
-    #    size: root.width, 40
+    Button:
+        id: "calculate"
+        text: "Calculate"
+        font_size: 69
+        size: root.width, 80
     GridLayout:
         id: "numbers"
         cols: 3
         rows: 5
-        size: root.width, root.height-200
+        size: root.width, root.height-275
         center_x: root.width/2
         center_y: root.height/2.5
 
@@ -61,7 +62,3 @@
         Button:
             font_size: 69
             text: "<="
-        Button:
-            font_size: 69
-            text: "Calculate"
-            width: root.width
