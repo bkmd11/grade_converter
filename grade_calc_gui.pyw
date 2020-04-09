@@ -60,7 +60,8 @@ def main():
               ]
 
     open_window = psg.Window('Grade Calculator', open_window_layout, element_justification='center')
-    main_window = psg.Window('Grade Calculator', layout, return_keyboard_events=True, element_justification='center')
+    main_window = psg.Window('Grade Calculator', layout, return_keyboard_events=True, element_justification='center',
+                             keep_on_top=True)
 
     open_window.read()
     open_window.close()
