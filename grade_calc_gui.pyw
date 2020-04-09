@@ -7,24 +7,24 @@ import grade_calculator
 
 def output(text):
     """The output section of the calculator"""
-    return psg.Text(text, key='OUTPUT', size=(12, 0), background_color='dark green',
+    return psg.Text(text, key='OUTPUT', size=(12, 0), background_color='snow',
                     text_color='black', font=('Times New Roman', 25), pad=(0, 0))
 
 
 def input_screen():
     """The input section of the calculator"""
     return psg.Text('', key='INPUT', size=(12, 0), justification='right', font=('Times New Roman', 25),
-                    background_color='dark green', pad=(0, 0), text_color='black')
+                    background_color='snow', pad=(0, 0), text_color='black')
 
 
 def num_button(text):
     """The number buttons"""
-    return psg.Button(text, size=(5, 2), button_color=('yellow', 'black'), font=('Times New Roman', 14, 'bold'))
+    return psg.Button(text, size=(5, 2), button_color=('black', 'light green'), font=('Times New Roman', 14, 'bold'))
 
 
 def calculate_button(text):
     """The magic button"""
-    return psg.Button(text, size=(18, 3), pad=(2, 0),  button_color=('yellow', 'black'),
+    return psg.Button(text, size=(18, 3), pad=(2, 0),  button_color=('black', 'orange'),
                       font=('Times New Roman', 15, 'bold'))
 
 
@@ -35,17 +35,17 @@ def open_window_message(text):
 
 def ok_button():
     """A button to push to move past the welcome screen"""
-    return psg.Ok(size=(15, 1), pad=(2, 0),  button_color=('yellow', 'black'), font=('Times New Roman', 15, 'bold'))
+    return psg.Ok(size=(15, 1), pad=(2, 0),  button_color=('white', 'black'), font=('Times New Roman', 15, 'bold'))
 
 
 def main():
     dok_grade = ''
-    psg.ChangeLookAndFeel('Dark')
+    #psg.ChangeLookAndFeel('Dark')
 
     open_window_layout = [[open_window_message('Welcome to the grade calculator!')],
                           [open_window_message('Enter a Depth of Knowledge grade')],
                           [open_window_message('and it will convert for you!')],
-                          [open_window_message('it will also copy the grade to')],
+                          [open_window_message('It will also copy the grade to')],
                           [open_window_message('the clipboard for convenience')],
                           [ok_button()]
                           ]
@@ -59,12 +59,13 @@ def main():
               [calculate_button('CALCULATE')]
               ]
 
-    open_window = psg.Window('Grade Calculator', open_window_layout, element_justification='center')
+   # open_window = psg.Window('Grade Calculator', open_window_layout, element_justification='center',
+    #                         background_color='light blue')
     main_window = psg.Window('Grade Calculator', layout, return_keyboard_events=True, element_justification='center',
-                             keep_on_top=True)
+                             background_color='dark green', keep_on_top=True)
 
-    open_window.read()
-    open_window.close()
+   # open_window.read()
+   # open_window.close()
 
     while True:
         event, value = main_window.read()
