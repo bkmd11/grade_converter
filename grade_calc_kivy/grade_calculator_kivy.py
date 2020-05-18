@@ -11,9 +11,12 @@ class GradeCalc(BoxLayout):
         self.display.text = text_input[:-1]
 
     def calculate_button(self, text_input):
-        grade_percentage = grade_calculator.grade_converter(float(text_input.strip()))
-        self.result.text = str(grade_percentage)
-        self.display.text = ''
+        try:
+            grade_percentage = grade_calculator.grade_converter(float(text_input.strip()))
+            self.result.text = str(grade_percentage)
+            self.display.text = ''
+        except ValueError:
+            pass
 
 
 class GradeCalcApp(App):

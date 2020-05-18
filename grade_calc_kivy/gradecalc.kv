@@ -9,29 +9,33 @@
             orientation: "vertical"
             size_hint: (1, .5)
             Label:
+                bold: True
                 id: grade_output
                 canvas.before:
                     Color:
-                        rgb: .13, .17, .18, 1
+                        rgb: .95, .95, .95, 1
                     Rectangle:
                         pos: self.pos
                         size: self.size
                 text: ""
-                font_size: 60
+                font_size: 100
                 text_size: self.size
+                color: 0, 0, 0, 1
                 halign: "center"
                 valign: "center"
             Label:
+                bold: True
                 id: grade_input
                 canvas.before:
                     Color:
-                        rgb: .13, .17, .18, 1
+                        rgb: .95, .95, .95, 1
                     Rectangle:
                         pos: self.pos
                         size: self.size
                 text: ""
-                font_size: 60
+                font_size: 100
                 text_size: self.size
+                color: 0, 0, 0, 1
                 halign: "right"
                 valign: "center"
         GridLayout:
@@ -44,82 +48,108 @@
             center_y: root.height/2.5
 
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "1"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "2"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "3"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "4"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "5"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "6"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "7"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "8"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "9"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "."
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "0"
+                color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
             Button:
+                bold: True
                 background_normal: ""
-                background_color: .2, .24, .26, 1
-                font_size: 40
+                background_color: 0, .6, .1, 1
+                font_size: 60
                 text: "<="
+                color: 0, 0, 0, 1
                 on_press: calculator.backspace_button(grade_input.text)
         Button:
             id: calculate
+            bold: True
             background_normal: ""
-            background_color: .2, .24, .26, 1
-            font_size: 69
+            background_color: .7, .3, .1, 1
+            font_size: 100
             size_hint: (1, .5)
             text: "Calculate"
+            color: 0, 0, 0, 1
             on_press: calculator.calculate_button(grade_input.text)
