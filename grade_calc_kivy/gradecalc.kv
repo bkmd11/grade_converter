@@ -7,7 +7,7 @@
         orientation: "vertical"
         BoxLayout:
             orientation: "vertical"
-            size_hint: (1, .5)
+            size_hint: (1, .65)
             Label:
                 bold: True
                 id: grade_output
@@ -18,7 +18,7 @@
                         pos: self.pos
                         size: self.size
                 text: ""
-                font_size: 100
+                font_size: .75 * self.height
                 text_size: self.size
                 color: 0, 0, 0, 1
                 halign: "center"
@@ -33,7 +33,7 @@
                         pos: self.pos
                         size: self.size
                 text: ""
-                font_size: 100
+                font_size: .75 * self.height
                 text_size: self.size
                 color: 0, 0, 0, 1
                 halign: "right"
@@ -51,7 +51,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "1"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -59,7 +59,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "2"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -67,7 +67,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "3"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -75,7 +75,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "4"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -83,7 +83,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "5"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -91,7 +91,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "6"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -99,7 +99,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "7"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -107,7 +107,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "8"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -115,7 +115,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "9"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -123,7 +123,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "."
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -131,7 +131,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "0"
                 color: 0, 0, 0, 1
                 on_press: grade_input.text += self.text
@@ -139,7 +139,7 @@
                 bold: True
                 background_normal: ""
                 background_color: 0, .6, .1, 1
-                font_size: 60
+                font_size: .75 * self.height
                 text: "<="
                 color: 0, 0, 0, 1
                 on_press: calculator.backspace_button(grade_input.text)
@@ -148,8 +148,8 @@
             bold: True
             background_normal: ""
             background_color: .7, .3, .1, 1
-            font_size: 100
-            size_hint: (1, .5)
+            font_size: .75 * self.height
+            size_hint: (1, .35)
             text: "Calculate"
             color: 0, 0, 0, 1
             on_press: calculator.calculate_button(grade_input.text)
