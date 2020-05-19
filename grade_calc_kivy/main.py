@@ -1,4 +1,4 @@
-import grade_calculator
+from grade_calc_kivy import kivy_grade_calc
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
@@ -12,7 +12,7 @@ class GradeCalc(BoxLayout):
 
     def calculate_button(self, text_input):
         try:
-            grade_percentage = grade_calculator.grade_converter(float(text_input.strip()))
+            grade_percentage = kivy_grade_calc.grade_converter(float(text_input.strip()))
             self.result.text = str(grade_percentage)
             self.display.text = ''
         except ValueError:
