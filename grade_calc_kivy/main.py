@@ -1,4 +1,4 @@
-from grade_calc_kivy import kivy_grade_calc
+import kivy_grade_calc
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
