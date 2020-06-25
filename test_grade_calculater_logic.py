@@ -43,6 +43,11 @@ class TestGradeRange(unittest.TestCase):
         result = grade_calculator.grade_converter(0)
         self.assertEqual(result, 0)
 
+    def test_out_of_range(self):
+        result = grade_calculator.grade_converter(4.1)
+        self.assertEqual(result, 'DOK grade out of range')
+
+
 
 if __name__ == '__main__':
     unittest.main()
