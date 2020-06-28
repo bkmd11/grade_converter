@@ -79,12 +79,6 @@ def main():
         except ValueError:
             print('Must be a number!')
 
-'''
-def test_script():
-    spam = [i for i in numpy.arange(0, 4.1, .1).round(decimals=1)]
-    for i in spam:
-        print(f'{i} - {grade_converter(float(i))}')
-'''
 
 if __name__ == '__main__':
     main()
